@@ -1,6 +1,10 @@
-<div class="chart-container">
-    <div>
+<div class="container">
+    <div class="menu-container">
         <app-menu></app-menu>
     </div>
-    <canvas  id="MyChart" >{{ chart }}</canvas>
-</div> 
+    <div class="chart-container">
+
+        <p id="date"> {{ date }} </p>
+        <canvas id="MyChart" >{{ chart }}</canvas>
+    </div>
+</div>

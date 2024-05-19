@@ -14,6 +14,7 @@ import { ShareDateService } from '../share-date.service';
 })
 export class MenuComponent {
 
+  selectedIndex: number = 0;
   dates: string[] = [];
 
   constructor(
@@ -22,7 +23,9 @@ export class MenuComponent {
       this.dates = this.weatherService.getDate();
   }
 
-  selectDate(date: string) {
+  selectDate(date: string, index: number) {
     this.shareDateService.updateDate(date);
+
+    this.selectedIndex = index;
   }
 }

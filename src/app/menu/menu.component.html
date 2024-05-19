@@ -1,3 +1,7 @@
-<div >
-    <button *ngFor="let date of dates" (click)="selectDate(date)"> {{ date }} </button>
+<div class="menu-container">
+    <button *ngFor="let date of dates; let i = index" 
+            [class.clicked-button]="selectedIndex === i"
+            (click)="selectDate(date, i)">
+      {{ date }}
+    </button>
 </div>

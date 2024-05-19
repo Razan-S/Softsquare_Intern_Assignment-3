@@ -50,13 +50,31 @@ export class DashboardComponent implements OnInit {
           {
             label: "Temperatures",
             data: this.weatherToday ? this.weatherToday.temperatures : [],
-            backgroundColor: 'blue',
+            backgroundColor: 'rgba(0, 123, 255, 0.5)',
+            borderColor: '#007bff',
+            borderWidth: 2,
             fill: true
           } 
         ]
       },
       options: {
-        aspectRatio:2.5
+        aspectRatio: 1.5,
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: 'Time'
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: 'Temperature (°C)'
+            }
+          }
+        }
       }
       
     });
